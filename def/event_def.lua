@@ -61,7 +61,7 @@ EVENT_ID =  {
 
 CLIENT_EVENT = {
 	MONSTER_DEAD				= "monster_dead",
-	PLAYER_HURT					= "player_hurt",
+	PLAYER_HP_CHANGE    		= "player_hp_change",
 	UPDATE_LEVEL				= "update_level",
 	UPDATE_GOODS				= "update_goods",
 	UPDATE_EQUIP				= "update_equip",
