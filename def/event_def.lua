@@ -68,4 +68,6 @@ CLIENT_EVENT = {
 	UPDATE_WEAR_EQUIP   		= "update_wear_equip",
 	UPDATE_TAKE_OFF_EQUIP  		= "update_take_off_equip",
 	UPDATE_LEVEL_UP_EQUIP  		= "update_level_up_equip",
+	UPDATE_USER_LEVEL	  		= "update_user_level",
+	UPDATE_ACHIEVEMENT	  		= "update_achievement",
 }

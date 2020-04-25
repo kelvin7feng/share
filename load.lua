@@ -16,6 +16,7 @@ require("share/config/monsterLib")
 require("share/config/test")
 require("share/config/level")
 require("share/config/homeLevelUp")
+require("share/config/redirectPage")
 
 require("share/common/json")
 require("share/common/log")
