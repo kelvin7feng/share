@@ -23,6 +23,12 @@ local INNER_BARRIER = false
 
 bIsInit = false
 
+pkgTimer.v_elapse_time = 0
+-- 帧数
+pkgTimer.v_current_frame_idx = 0 
+
+pkgTimer.v_index_slot_map = {}
+
 local function _create_wheel(scale)
     local wheel = {} 
     for i=1,scale do
@@ -33,6 +39,13 @@ local function _create_wheel(scale)
 
     return wheel
 end
+
+pkgTimer.v_wheels = {
+    _create_wheel(WHEEL_SIZE_1), 
+    _create_wheel(WHEEL_SIZE_2), 
+    _create_wheel(WHEEL_SIZE_3), 
+    _create_wheel(WHEEL_SIZE_4)
+}
 
 function Init()
     if bIsInit then
@@ -200,5 +213,7 @@ function Update(elapse)
 end
 
 function clear()
-    Init()
+    for timerId, slot in pairs(pkgTimer.v_index_slot_map) do
+        remove_timer(timerId)
+    end
 end

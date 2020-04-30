@@ -70,4 +70,9 @@ CLIENT_EVENT = {
 	UPDATE_LEVEL_UP_EQUIP  		= "update_level_up_equip",
 	UPDATE_USER_LEVEL	  		= "update_user_level",
 	UPDATE_ACHIEVEMENT	  		= "update_achievement",
+	UPDATE_DOWNLOAD	  			= "update_download",
+	UPDATE_DOWNLOAD_PROCESS 	= "update_download_process",
+	UPDATE_EXTRACT_PROCESS 	    = "update_extract_process",
+	EXTRACT_COMPLETE 	   		= "extract_complete",
+	DOWNLOAD_COMPLETE  			= "download_complete",
 }
