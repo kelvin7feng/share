@@ -24,5 +24,3 @@ require("share/const/pkgGoodsCfgMgr")
 require("share/const/pkgHomeCfgMgr")
 require("share/const/pkgLevelCfgMgr")
 require("share/const/pkgRewardCfgMgr")
-
-print("config ======================================= load")
