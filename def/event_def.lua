@@ -9,6 +9,7 @@ EVENT_ID =  {
 	--]]
 	CMD = {
 		CMD_1					= 1,			-- 升级
+		CMD_2					= 2,			-- 加金币
 	},
 
 	SYSTEM = {
@@ -48,9 +49,12 @@ EVENT_ID =  {
 		LEVEL_UP			    =   40007,
 		ON_LEVEL_UP			    =   40008,
 	},
-
+	
 	HOME = {
 		LEVEL_UP			    =   50001,
+		ON_LEVEL_UP			    =   50002,
+		UPGRADE 			    =   50003,
+		ON_UPGRADE 			    =   50004,
 	},
 
 	ACHIEVEMENT = {

@@ -129,6 +129,7 @@ DATABASE_TABLE_FIELD =
 	},
 	
 	[GAME_DATA_TABLE_NAME.HOME_INFO]	= {
+		dStar													 = 0,
 		dLevel													 = 0,
 	},
 

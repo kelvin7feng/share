@@ -14,13 +14,47 @@ ErrorCode = {
     COMPOSE_SUCCESS         = 11,
 }
 
-function GetLevelUpCfg(dLevel)
-    return _cfg.homeLevelUp[dLevel]
+m_tbLevelUpCfg = m_tbLevelUpCfg or {}
+
+function Init()
+    m_tbLevelUpCfg = {}
+
+    local dStar = nil
+    local dLevel = nil
+    for _, tbCfg in pairs(_cfg.homeLevelUp) do
+        dStar = tbCfg.star
+        dLevel = tbCfg.level
+        if not m_tbLevelUpCfg[dStar] then
+            m_tbLevelUpCfg[dStar] = {}
+        end
+           
+        m_tbLevelUpCfg[dStar][dLevel] = tbCfg
+    end
 end
 
-function GetLevelUpCost(dLevel)
+Init()
+
+function GetMaxLevel(dStar)
+    local dMaxLevel = 0
+    if not m_tbLevelUpCfg[dStar] then
+        return dMaxLevel
+    end
+    return table.count(m_tbLevelUpCfg[dStar])
+end
+
+function GetLevelUpCfg(dStar, dLevel)
+    if not m_tbLevelUpCfg[dStar] or not m_tbLevelUpCfg[dStar][dLevel] then
+        return nil
+    end
+    return m_tbLevelUpCfg[dStar][dLevel]
+end
+
+function GetLevelUpCost(dStar, dLevel)
     local tbCost = {}
-    local tbCfg = _cfg.homeLevelUp[dLevel]
+    local tbCfg = GetLevelUpCfg(dStar, dLevel)
+    if not tbCfg then
+        return tbCost
+    end
     for i=1, 5 do
         local dGoodsType = tbCfg["goodsType"..i]
         local dCount = tbCfg["count"..i]
@@ -29,4 +63,14 @@ function GetLevelUpCost(dLevel)
         end
     end
     return tbCost
+end
+
+function HaveNextLevel(dStar, dLevel)
+    local tbCfg = GetLevelUpCfg(dStar, dLevel+1)
+    return tbCfg and true or false
+end
+
+function HaveNextStar(dStar)
+    local tbCfg = GetLevelUpCfg(dStar + 1, 0)
+    return tbCfg and true or false
 end
