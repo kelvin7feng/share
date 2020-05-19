@@ -132,6 +132,8 @@ function AddOnceTimer(desc, expires, cb, arg1, arg2)
         remove_timer(dTimerId)
     end
     dTimerId = AddTimer(desc, 1, expires, callback, arg1, arg2)
+
+    return dTimerId
 end
 
 -- 注释，
@@ -140,7 +142,7 @@ end
 -- expires 秒， 精确到0.1
 -- desc 格式: model:function 比如mark_quest:add_wait_mark_timer
 function AddRepeatTimer(desc, expires, cb, arg1, arg2)
-    AddTimer(desc, -1, expires, cb, arg1, arg2)
+    return AddTimer(desc, -1, expires, cb, arg1, arg2)
 end
 
 function DeleteTimer(index)

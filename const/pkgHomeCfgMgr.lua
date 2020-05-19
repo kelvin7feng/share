@@ -2,16 +2,16 @@ doNameSpace("pkgHomeCfgMgr")
 
 ErrorCode = {
     CFG_ILLEGAL             = 1,
-    GOODS_NOT_ENOUGH        = 2,
+    PARAM_ILLEGAL           = 2,
     LEVEL_NOT_ENOUGH        = 3,
-    PARAM_ILLEGAL           = 4,
-    FORMULA_LOCK            = 5,
-    GOODS_ILLEGAL           = 6,
-    SCORE_NOT_IN_RANGE      = 7,
-    RANDOM_ERROR            = 8,
-    EXP_NOT_ENOUGH          = 9,
-    LEVEL_UP_SUCCESS        = 10,
-    COMPOSE_SUCCESS         = 11,
+    GOODS_NOT_ENOUGH        = 4,
+}
+
+LangMap = {
+    [ErrorCode.CFG_ILLEGAL]             = 100001,
+    [ErrorCode.PARAM_ILLEGAL]           = 100002,
+    [ErrorCode.LEVEL_NOT_ENOUGH]        = 100003,
+    [ErrorCode.GOODS_NOT_ENOUGH]        = 100004,
 }
 
 m_tbLevelUpCfg = m_tbLevelUpCfg or {}

@@ -55,6 +55,7 @@ EVENT_ID =  {
 		ON_LEVEL_UP			    =   50002,
 		UPGRADE 			    =   50003,
 		ON_UPGRADE 			    =   50004,
+		ON_ERROR				=   50005,
 	},
 
 	ACHIEVEMENT = {
