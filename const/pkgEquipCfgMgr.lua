@@ -12,6 +12,7 @@ AttrLanguage = {
     attr9           = 1009,
     attr10          = 1010,
     attr11          = 1011,
+    attr12          = 1012,
 }
 
 m_tbLevelUpCfg = m_tbLevelUpCfg or {}
