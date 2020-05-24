@@ -4,4 +4,5 @@ GOODS_DEF = {
     DIAMOND                     =   2,
     EXP                         =   3,
     EQUIP                       =   1000,
+    SEED                        =   2000,
 }
