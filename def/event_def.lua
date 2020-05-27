@@ -62,4 +62,9 @@ EVENT_ID =  {
 		GET_REWARD			    =   60001,
 		ON_UPDATE_ACHIEVEMENT   =   60002,
 	},
+	
+	CROPLAND = {
+		PLANT				    =   70001,
+		ON_PLANT			    =   70002,
+	},
 }

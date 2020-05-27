@@ -30,8 +30,7 @@ function randomKey(tbCfgLib, strProb)
         print("randomKey warning -------------------------------------- dTotalProb is nil")
         return dKey
     end
-
-    randomSeed()
+    
     local dCurrntProb = 0
     local dRandomProb = math.random(1,dTotalProb)
     

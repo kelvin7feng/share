@@ -142,17 +142,7 @@ DATABASE_TABLE_FIELD =
 
 	[GAME_DATA_TABLE_NAME.CROPLAND_INFO]	= 
 	{
-		tbLand													 = {
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-			{dId = 0, dState = 0, dPlantTime = 0},
-		},
+
 	},
 
 }
