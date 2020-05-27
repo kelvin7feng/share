@@ -34,3 +34,29 @@ end
 function GetCropCfg(dId)
     return _cfg.crop[tonumber(dId)]
 end
+
+function CanHarvest(tbLandInfo)
+
+    if not tbLandInfo then
+        return
+    end
+    
+    local dState = tbLandInfo.dState
+    if dState ~= pkgCroplandCfgMgr.State.PLANTING then
+        return false
+    end
+
+    local tbCropCfg = pkgCroplandCfgMgr.GetCropCfg(tbLandInfo.dId)
+    if not tbCropCfg then
+        return false
+    end
+    
+    local dCfgGrowTime = tbCropCfg.growTime
+    local dPlantTime = tbLandInfo.dPlantTime
+    local dEndTime = dPlantTime + dCfgGrowTime
+    if os.time() < dEndTime then
+        return false
+    end
+
+    return true
+end

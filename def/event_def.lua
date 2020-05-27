@@ -66,5 +66,7 @@ EVENT_ID =  {
 	CROPLAND = {
 		PLANT				    =   70001,
 		ON_PLANT			    =   70002,
+		HARVEST				    =   70003,
+		ON_HARVEST			    =   70004,
 	},
 }
