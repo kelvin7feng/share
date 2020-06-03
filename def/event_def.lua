@@ -69,4 +69,8 @@ EVENT_ID =  {
 		HARVEST				    =   70003,
 		ON_HARVEST			    =   70004,
 	},
+	
+	COLLECTION = {
+		ON_COLLECT_NEW 		    =   80001,
+	},
 }

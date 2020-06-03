@@ -28,5 +28,6 @@ require("share/const/pkgLevelCfgMgr")
 require("share/const/pkgRewardCfgMgr")
 require("share/const/pkgPlayerLevelCfgMgr")
 require("share/const/pkgCroplandCfgMgr")
+require("share/const/pkgCollectionCfgMgr")
 
 require("share/const/pkgAttrMgr")

@@ -31,6 +31,7 @@ GAME_DATA_TABLE_NAME =
 	HOME_INFO							= "HomeInfo",
 	ACHIEVEMENT_INFO	    			= "AchievementInfo",
 	CROPLAND_INFO   	    			= "CroplandInfo",
+	COLLECTION_INFO   	    			= "CollectionInfo",
 }
 
 -- 数据字段表
@@ -122,7 +123,6 @@ DATABASE_TABLE_FIELD =
 		["2"]													 = 100,
 		["100"]													 = 1,
 		["2001"]											     = 1,
-		["2002"]												 = 2,
 	},
 
 	[GAME_DATA_TABLE_NAME.EQUIP_INFO]	= 
@@ -145,4 +145,8 @@ DATABASE_TABLE_FIELD =
 
 	},
 
+	[GAME_DATA_TABLE_NAME.COLLECTION_INFO]	= 
+	{
+
+	},
 }

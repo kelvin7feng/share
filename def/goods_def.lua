@@ -5,4 +5,5 @@ GOODS_DEF = {
     EXP                         =   3,
     EQUIP                       =   1000,
     SEED                        =   2000,
+    CROP                        =   2001,
 }
