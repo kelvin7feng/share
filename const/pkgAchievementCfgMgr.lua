@@ -2,7 +2,9 @@ doNameSpace("pkgAchievementCfgMgr")
 
 AchievementType = {
     PLAYER_LEVEL                  = 1,
-    USE_FORMULA_TO_COMPOSE        = 2,
+    HOUSE_LEVEL_UP                = 2,
+    BATTLE_LEVEL                  = 3,
+    HOUSE_UPGRADE                 = 4,
 }
 
 UnlockType = {
@@ -73,4 +75,22 @@ function getDefaultAchievement()
     end
     
     return tbAll
+end
+
+function getDesc3(tbCfg)
+    local strParam = pkgLevelCfgMgr.GetLevelCfg(tbCfg.target).name
+    return pkgLanguageMgr.FormatStr(tbCfg.desc, strParam)
+end
+
+function getDesc(dId)
+    local strDesc = nil
+    local tbCfg = getAchievementCfg(dId)
+    local dAchievementType = tbCfg.achievementType
+    if pkgAchievementCfgMgr["getDesc"..dAchievementType] then
+        strDesc = pkgAchievementCfgMgr["getDesc"..dAchievementType](tbCfg)
+    else
+        strDesc = pkgLanguageMgr.FormatStr(tbCfg.desc, tbCfg.target)
+    end
+
+    return strDesc
 end

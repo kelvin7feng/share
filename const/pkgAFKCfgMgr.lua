@@ -1,19 +1,44 @@
 doNameSpace("pkgAFKCfgMgr")
 
+m_dRandomLibCount = 5
+
 function GetAFKCfg(dLevel)
     return _cfg.afk[dLevel]
 end
 
 function CalcScoreLevel(dLevel, dScore)
     local dScoreLevel = nil
+    local tbLib = {}
+    local tbLevel = {}
+    local dLibIndex = 0
     for dTempScoreLevel, tbCfg in pairs(_cfg.afkRandom) do
         if dScore >= tbCfg.minScore and dScore <= tbCfg.maxScore 
             and dLevel >= tbCfg.minLevel and dLevel <= tbCfg.maxLevel then
-            dScoreLevel = dTempScoreLevel
-            break
+            local dTotalProb = 0
+            for i=1, m_dRandomLibCount do
+                local dProb = tbCfg["prob"..i]
+                if dProb and dProb > 0 then
+                    dTotalProb = dTotalProb + dProb
+                end
+            end
+            if dTotalProb > 0 then
+                dLibIndex = dLibIndex + 1
+                tbLib["prob"..dLibIndex] = dTotalProb
+                tbLib["level"..dLibIndex] = dTempScoreLevel
+            end
         end
     end
-    --print("CalcScoreLevel ======================== ", dScoreLevel)
+
+    if dLibIndex <= 0 then
+        return dScoreLevel
+    end
+
+    local dKey = randomKey(tbLib)
+	
+    if dKey then
+        dScoreLevel = tbLib["level" .. dKey]
+    end
+    --print("dScoreLevel ======================== ", dScoreLevel)
     return dScoreLevel
 end
 

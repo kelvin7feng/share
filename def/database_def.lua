@@ -32,6 +32,7 @@ GAME_DATA_TABLE_NAME =
 	ACHIEVEMENT_INFO	    			= "AchievementInfo",
 	CROPLAND_INFO   	    			= "CroplandInfo",
 	COLLECTION_INFO   	    			= "CollectionInfo",
+	SHOP_INFO   	    				= "ShopInfo",
 }
 
 -- 数据字段表
@@ -148,5 +149,17 @@ DATABASE_TABLE_FIELD =
 	[GAME_DATA_TABLE_NAME.COLLECTION_INFO]	= 
 	{
 
+	},
+
+	--[[
+		1:普通商店
+		2:公会商店
+		2:宠物商店
+	--]]
+	[GAME_DATA_TABLE_NAME.SHOP_INFO]	= 
+	{
+		[1]								= {dLastUpdateTime = 0, tbGoodsList = {}},
+		[2]								= {dLastUpdateTime = 0, tbGoodsList = {}},
+		[3]								= {dLastUpdateTime = 0, tbGoodsList = {}},
 	},
 }

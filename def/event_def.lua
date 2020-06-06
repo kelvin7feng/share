@@ -73,4 +73,10 @@ EVENT_ID =  {
 	COLLECTION = {
 		ON_COLLECT_NEW 		    =   80001,
 	},
+	
+	SHOP = {
+		ON_UPDATE_SHOP_INFO     =   90001,
+		BUY_GOODS	            =   90002,
+		ON_BUY_GOODS            =   90003,
+	},
 }
