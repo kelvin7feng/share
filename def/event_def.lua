@@ -10,6 +10,7 @@ EVENT_ID =  {
 	CMD = {
 		CMD_1					= 1,			-- 升级
 		CMD_2					= 2,			-- 加金币
+		CMD_3					= 3,			-- 加经验
 	},
 
 	SYSTEM = {
@@ -32,6 +33,7 @@ EVENT_ID =  {
 		SPAWN_MONSTER			=   20003,
 		KILL_MONSTER			=   20004,
 		CHALLENGE_BOSS			=   20005,
+		UPDATE_CUR_LEVEL		=   20006,
 	},
 	
 	GOODS = {
@@ -78,5 +80,6 @@ EVENT_ID =  {
 		ON_UPDATE_SHOP_INFO     =   90001,
 		BUY_GOODS	            =   90002,
 		ON_BUY_GOODS            =   90003,
+		UPDATE_SHOP_INFO        =   90004,
 	},
 }
