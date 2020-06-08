@@ -13,6 +13,9 @@ function GetRandomMonster(dId)
     local dLibId = tbCfg.monsterLibId
     local tbCfgLib = GetMonsterLibCfg(dLibId)
     local dKey = randomKey(tbCfgLib)
+    if not dKey then
+        LOG_ERROR("GetRandomMonster can not find lib:" .. dId .. "," .. dLibId)
+    end
     return tbCfgLib["monsterId"..dKey]
 end
 
