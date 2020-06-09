@@ -82,4 +82,9 @@ EVENT_ID =  {
 		ON_BUY_GOODS            =   90003,
 		UPDATE_SHOP_INFO        =   90004,
 	},
+
+	AFK = {
+		GET_REWARD				= 	100001,
+		ON_GET_REWARD			= 	100002,
+	}
 }
