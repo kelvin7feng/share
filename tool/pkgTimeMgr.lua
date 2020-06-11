@@ -7,6 +7,18 @@ ONE_MIN_SECONDS = 60
 ONE_HOUR_SECONDS = 60*ONE_MIN_SECONDS 
 ONE_DAY_SECONDS = 24*ONE_HOUR_SECONDS
 
+local function date2TimeZero(dTime, dHour)
+	if dTime <= 0 then
+		return 0
+	end
+
+	local tbDate = os.date("*t", dTime)
+	tbDate.hour = dHour or GAME_RESET_TIME
+	tbDate.min = 0
+	tbDate.sec = 0
+	return os.time(tbDate)
+end
+
 --dHour超过几点算第二天
 function IsTodayTime(dTime, dTimeNow, dHour)
 	assert(dTime)
@@ -58,4 +70,16 @@ function FormatTimestamp(dTime, bWithDay)
 		str = string.format("%02d:%02d:%02d", h, m, s)
 	end
 	return str
+end
+
+--获取当前时间次日6点
+function GetTomorrowStartTime(dTimeNow, dHour)
+
+    dTimeNow = dTimeNow or os.time()
+    local dZeroTime = date2TimeZero(dTimeNow, dHour)
+    if dTimeNow < dZeroTime then
+        return dZeroTime
+    else
+        return dZeroTime + ONE_DAY_SECONDS
+    end
 end

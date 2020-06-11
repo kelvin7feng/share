@@ -1,5 +1,8 @@
 doNameSpace("pkgAFKCfgMgr")
 
+MAX_AFK_TIME = 24 * 60
+MAX_AFK_SECOND = 24 * 60 * 60
+
 m_dRandomLibCount = 5
 
 function GetAFKCfg(dLevel)
