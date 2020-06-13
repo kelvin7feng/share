@@ -30,3 +30,17 @@ function init()
 end
 
 init()
+
+function IsEquip(dId)
+    local bIsEquip = false
+    local tbEquip = GetGoodsCfg(dId)
+    if not tbEquip then
+        return bIsEquip
+    end
+
+    if GOODS_DEF.EQUIP == tbEquip.goodsType then
+        bIsEquip = true
+    end
+
+    return bIsEquip
+end
