@@ -13,7 +13,7 @@ AttrType = {
 }
 
 DefaultAttr = {
-    [AttrType.CRITICAL]          = 1,
+    [AttrType.CRITICAL]          = 1.5,
     [AttrType.HIT_RATE]          = 100,
 }
 
