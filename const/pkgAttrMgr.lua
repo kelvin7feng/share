@@ -12,8 +12,23 @@ AttrType = {
     HIT_RATE         = 7,
 }
 
+AttrLanguage = {
+    attr1           = 1001,
+    attr2           = 1002,
+    attr3           = 1003,
+    attr4           = 1004,
+    attr5           = 1005,
+    attr6           = 1006,
+    attr7           = 1007,
+    attr8           = 1008,
+    attr9           = 1009,
+    attr10          = 1010,
+    attr11          = 1011,
+    attr12          = 1012,
+}
+
 DefaultAttr = {
-    [AttrType.CRITICAL]          = 1,
+    [AttrType.CRITICAL]          = 1.5,
     [AttrType.HIT_RATE]          = 100,
 }
 
@@ -71,4 +86,25 @@ function CalcTotalAttr(tbAttr, tbAttrList)
     end
 
     return tbAttr
+end
+
+function GetRoleAttrDescList(tbAttr)
+
+    local dAttr = nil
+    local dUnit = 0
+    local dLId = 0
+    local tbDescAtrr = {}
+    for i=1,m_dTotalAttr do
+        dAttr = tbAttr[i].finalVal
+        dLId = AttrLanguage["attr"..i]
+        if dAttr > 0 then
+            if tbAttr[i].abs then
+                table.insert(tbDescAtrr, string.format(pkgLanguageMgr.GetStringById(dLId),dAttr))
+            else
+                table.insert(tbDescAtrr, string.format(pkgLanguageMgr.GetStringById(dLId),dAttr) .. "%")
+            end
+        end
+    end
+
+    return tbDescAtrr
 end
