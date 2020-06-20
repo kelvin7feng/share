@@ -16,11 +16,20 @@ EVENT_ID =  {
 	SYSTEM = {
 		NOTIFY				    = 100,			-- Toast消息
 	},
+	
+	NET = {
+		RECONNECTED_FAILED		= 200,			-- 重连失败
+		RECONNECTED_SUCCEED		= 201,			-- 重连成功
+		HEART_BEAT_1			= 202,			-- 上报心跳
+		HEART_BEAT_2			= 203,			-- 下发心跳
+	},
 
 	-- 客户端事件, 10001, 10100
 	CLIENT_LOGIN = {
 		LOGIN					=   10001,		-- 直接登录
-		ENTER_GAME				=	10002		-- 进入游戏
+		ENTER_GAME				=	10002,		-- 进入游戏
+		RELOGIN					=	10003,		-- 重连
+		ON_RELOGIN				=	10004,		-- 重连回调
 	},
 	
 	BASE_INFO = {
@@ -87,5 +96,6 @@ EVENT_ID =  {
 	AFK = {
 		GET_REWARD				= 	100001,
 		ON_GET_REWARD			= 	100002,
-	}
+	},
+
 }

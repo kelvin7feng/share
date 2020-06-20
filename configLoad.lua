@@ -31,6 +31,8 @@ require("share/cfg_mgr/pkgPlayerLevelCfgMgr")
 require("share/cfg_mgr/pkgCroplandCfgMgr")
 require("share/cfg_mgr/pkgCollectionCfgMgr")
 require("share/cfg_mgr/pkgShopCfgMgr")
+require("share/cfg_mgr/pkgMonsterCfgMgr")
+require("share/cfg_mgr/pkgPetCfgMgr")
 
 require("share/const/pkgAttrMgr")
 require("share/const/pkgBattleConstMgr")

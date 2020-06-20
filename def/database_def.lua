@@ -33,6 +33,7 @@ GAME_DATA_TABLE_NAME =
 	CROPLAND_INFO   	    			= "CroplandInfo",
 	COLLECTION_INFO   	    			= "CollectionInfo",
 	SHOP_INFO   	    				= "ShopInfo",
+	PET_INFO   	   		 				= "PetInfo",
 }
 
 -- 数据字段表
@@ -161,5 +162,11 @@ DATABASE_TABLE_FIELD =
 		[1]								= {dLastUpdateTime = 0, tbGoodsList = {}},
 		[2]								= {dLastUpdateTime = 0, tbGoodsList = {}},
 		[3]								= {dLastUpdateTime = 0, tbGoodsList = {}},
+	},
+
+	[GAME_DATA_TABLE_NAME.PET_INFO]	= 
+	{
+		tbTeam							= {"10001",0,0,0,0,0},
+		tbPetList						= {["10001"] = {dLevel = 0}},
 	},
 }
