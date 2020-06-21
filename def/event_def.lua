@@ -98,4 +98,10 @@ EVENT_ID =  {
 		ON_GET_REWARD			= 	100002,
 	},
 
+	PET = {
+		BATTLE					= 	100101,
+		ON_BATTLE				= 	100102,
+		REST					= 	100103,
+		ON_REST					= 	100104,
+	},
 }

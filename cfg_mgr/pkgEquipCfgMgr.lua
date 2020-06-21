@@ -24,62 +24,6 @@ function GetEquipCfg(dId)
     return _cfg.equip[dId]
 end
 
-function GetAttrDescList(dId)
-    local tbAttr = {}
-    local tbCfg = GetEquipCfg(dId)
-    if not tbCfg then
-        return tbAttr
-    end
-
-    local dAttr = nil
-    local dUnit = 0
-    local dLId = 0
-    for i=1,12 do
-        dAttr = tbCfg["attr"..i]
-        dUnit = tbCfg["unit"..i]
-        dLId = pkgAttrMgr.AttrLanguage["attr"..i]
-        if dAttr > 0 then
-            if dUnit == 1 then
-                dAttr = dAttr
-                table.insert(tbAttr, string.format(pkgLanguageMgr.GetStringById(dLId),dAttr))
-            else
-                dAttr = dAttr * 0.01
-                table.insert(tbAttr, string.format(pkgLanguageMgr.GetStringById(dLId),dAttr) .. "%")
-            end
-        end
-    end
-
-    return tbAttr
-end
-
-function GetLevelUpAttrDescList(dEquipId, dLevel)
-    local tbAttr = {}
-    local tbCfg = GetLevelUpCfg(dEquipId, dLevel)
-    if not tbCfg then
-        return tbAttr
-    end
-    
-    local dAttr = nil
-    local dUnit = 0
-    local dLId = 0
-    for i=1,11 do
-        dAttr = tbCfg["attr"..i]
-        dUnit = tbCfg["unit"..i]
-        dLId = pkgAttrMgr.AttrLanguage["attr"..i]
-        if dAttr > 0 then
-            if dUnit == 1 then
-                dAttr = dAttr
-                table.insert(tbAttr, string.format(pkgLanguageMgr.GetStringById(dLId),dAttr))
-            else
-                dAttr = dAttr * 0.01
-                table.insert(tbAttr, string.format(pkgLanguageMgr.GetStringById(dLId),dAttr) .. "%")
-            end
-        end
-    end
-
-    return tbAttr
-end
-
 function IsLegalSlot(dSlotId)
     if not dSlotId or dSlotId <= 0 or dSlotId > 6 then
         return false
