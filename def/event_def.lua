@@ -11,6 +11,7 @@ EVENT_ID =  {
 		CMD_1					= 1,			-- 升级
 		CMD_2					= 2,			-- 加金币
 		CMD_3					= 3,			-- 加经验
+		CMD_4					= 4,			-- 加钻石
 	},
 
 	SYSTEM = {
@@ -91,6 +92,8 @@ EVENT_ID =  {
 		BUY_GOODS	            =   90002,
 		ON_BUY_GOODS            =   90003,
 		UPDATE_SHOP_INFO        =   90004,
+		BUY_PET					=   90005,
+		ON_BUY_PET				=   90006,
 	},
 
 	AFK = {

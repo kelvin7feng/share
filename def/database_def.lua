@@ -166,10 +166,9 @@ DATABASE_TABLE_FIELD =
 
 	[GAME_DATA_TABLE_NAME.PET_INFO]	= 
 	{
-		tbTeam							= {"10001",0,0,0,0,0},
+		tbTeam							= {0,0,0,0,0,0},
 		tbPetList						= {
-											["10001"] = {slot = 1, level = 0, cfgId = "10001"},
-											["10002"] = {slot = 0, level = 0, cfgId = "10002"},
-										}, -- {id, cfgId, level}
+											--["10001"] = {slot = 1, level = 0, cfgId = "10001"},
+										},  -- {id, cfgId, level}
 	},
 }
