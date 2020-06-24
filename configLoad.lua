@@ -35,6 +35,7 @@ require("share/cfg_mgr/pkgShopCfgMgr")
 require("share/cfg_mgr/pkgMonsterCfgMgr")
 require("share/cfg_mgr/pkgPetCfgMgr")
 require("share/cfg_mgr/pkgAttrCfgMgr")
+require("share/cfg_mgr/pkgGuideCfgMgr")
 
 require("share/const/pkgAttrMgr")
 require("share/const/pkgBattleConstMgr")

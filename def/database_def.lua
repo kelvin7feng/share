@@ -34,6 +34,7 @@ GAME_DATA_TABLE_NAME =
 	COLLECTION_INFO   	    			= "CollectionInfo",
 	SHOP_INFO   	    				= "ShopInfo",
 	PET_INFO   	   		 				= "PetInfo",
+	GUIDE_INFO 	   		 				= "GuideInfo",
 }
 
 -- 数据字段表
@@ -99,24 +100,23 @@ DATABASE_TABLE_FIELD =
 
 	[GAME_DATA_TABLE_NAME.BASE_INFO]	= 
 	{
-		[GAME_DATA_FIELD_NAME.BaseInfo.USER_ID] 				 = 0,		-- 玩家Id
-		[GAME_DATA_FIELD_NAME.BaseInfo.AVATAR]					 = 0,		-- 职业头像
-		[GAME_DATA_FIELD_NAME.BaseInfo.SEX]					     = 0,		-- 性别
-		[GAME_DATA_FIELD_NAME.BaseInfo.NAME]					 = "Guest",	-- 名字
-		[GAME_DATA_FIELD_NAME.BaseInfo.DIAMOND]				     = 0,		-- 钻石
-		[GAME_DATA_FIELD_NAME.BaseInfo.GOLD]				     = 5000,	-- 金币
-		[GAME_DATA_FIELD_NAME.BaseInfo.LEVEL]				     = 1,		-- 等级
-		[GAME_DATA_FIELD_NAME.BaseInfo.LAST_LOGIN_TIME]		     = 0,	    -- 上次登录时间
-		[GAME_DATA_FIELD_NAME.BaseInfo.LAST_LOGIN_TIME]		     = 0,	    -- 上次登录时间
+		UserId									 				 = 0,		-- 玩家Id
+		Avatar													 = 0,		-- 职业头像
+		Sex													     = 0,		-- 性别
+		Name													 = "Guest",	-- 名字
+		Diamond				    								 = 0,		-- 钻石
+		Gold				    								 = 5000,	-- 金币
+		Level				     								 = 1,		-- 等级
+		LastLoginTime										     = 0,	    -- 上次登录时间
 	},
 
 	[GAME_DATA_TABLE_NAME.BATTLE_INFO]	= 
 	{
-		[GAME_DATA_FIELD_NAME.BattleInfo.CUR_LEVEL]	 			 = 1,		-- 当前关卡
-		[GAME_DATA_FIELD_NAME.BattleInfo.CUR_MONSTER_ID]	 	 = 1,		-- 当前怪物Id
-		[GAME_DATA_FIELD_NAME.BattleInfo.NEXT_CHALLENGE_TYPE] 	 = 1,		-- 即将挑战类型
-		[GAME_DATA_FIELD_NAME.BattleInfo.CUR_CHALLENGE_TYPE] 	 = 1,		-- 当前挑战类型
-		[GAME_DATA_FIELD_NAME.BattleInfo.LAST_COLLECT_TIME]	     = 0,		-- 挂机时间
+		CurLevel									 			 = 1,		-- 当前关卡
+		CurMonsterId										 	 = 1,		-- 当前怪物Id
+		NextChallengeType									 	 = 1,		-- 即将挑战类型
+		CurChallengeType									 	 = 1,		-- 当前挑战类型
+		LastCollectTime										     = 0,		-- 挂机时间
 	},
 
 	[GAME_DATA_TABLE_NAME.BAG_INFO]	= 
@@ -155,7 +155,7 @@ DATABASE_TABLE_FIELD =
 	--[[
 		1:普通商店
 		2:公会商店
-		2:宠物商店
+		3:宠物商店
 	--]]
 	[GAME_DATA_TABLE_NAME.SHOP_INFO]	= 
 	{
@@ -171,4 +171,10 @@ DATABASE_TABLE_FIELD =
 											--["10001"] = {slot = 1, level = 0, cfgId = "10001"},
 										},  -- {id, cfgId, level}
 	},
+
+	[GAME_DATA_TABLE_NAME.GUIDE_INFO]	= 
+	{
+		dGuideId						= 0,
+	},
+	
 }

@@ -37,6 +37,11 @@ EVENT_ID =  {
 		ON_LEVEL_CHANGE			=   10101,		-- 玩家等级
 	},
 
+	GUIDE = {
+		FINISH					=   10201,
+		ON_FINISH				=   10202,
+	},
+
 	CLIENT_BATTLE = {
 		READY					=   20001,
 		START					=   20002,
@@ -107,4 +112,5 @@ EVENT_ID =  {
 		REST					= 	100103,
 		ON_REST					= 	100104,
 	},
+
 }
