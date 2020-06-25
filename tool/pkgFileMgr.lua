@@ -36,10 +36,10 @@ local function GetPersistentPath(strFileName)
 end
 
 local function GetStreamingPath(strFileName)
-	local filePath = string.format("%s%s", __streamingAssetsPath, strFileName)
+	local filePath = string.format("%s/%s", __streamingAssetsPath, strFileName)
 	if UnityEngine.Application.platform == UnityEngine.RuntimePlatform.Android then
 		if not KG.CustomFile.IsAndroidAssetExist(strFileName) then
-			return
+			return filePath
 		end
 	elseif not FileExists(filePath) then
 		return
@@ -48,7 +48,7 @@ local function GetStreamingPath(strFileName)
 end
 
 function GetAssetPath(strFileName)
-    local strFilePath = GetPersistentPath(strFileName)
+	local strFilePath = GetPersistentPath(strFileName)
 	if not strFilePath then
 		strFilePath = GetStreamingPath(strFileName)
 	end
