@@ -39,7 +39,7 @@ function GetMaxLevel(dStar)
     if not m_tbLevelUpCfg[dStar] then
         return dMaxLevel
     end
-    return table.count(m_tbLevelUpCfg[dStar])
+    return table.count(m_tbLevelUpCfg[dStar]) - 1
 end
 
 function GetLevelUpCfg(dStar, dLevel)

@@ -16,6 +16,7 @@ function Init()
 
         m_tbLevelUpCfg[dEquipId][dLevel] = tbCfg
     end
+    
 end
 
 Init()
@@ -32,11 +33,12 @@ function IsLegalSlot(dSlotId)
 end
 
 function GetLevelUpCfg(dEquipId, dLevel)
+    -- print("dEquipId, dLevel：", dEquipId, dLevel)
     return m_tbLevelUpCfg[dEquipId][dLevel]
 end
 
 function GetMaxLevel(dEquipId)
-    return table.count(m_tbLevelUpCfg[dEquipId])
+    return table.count(m_tbLevelUpCfg[dEquipId]) - 1
 end
 
 function GetLevelUpExp(tbConsumeEquip)

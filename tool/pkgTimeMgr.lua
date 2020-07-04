@@ -6,6 +6,7 @@ GAME_RESET_TIME = 6
 ONE_MIN_SECONDS = 60
 ONE_HOUR_SECONDS = 60*ONE_MIN_SECONDS 
 ONE_DAY_SECONDS = 24*ONE_HOUR_SECONDS
+ONE_WEEK_SECONDS = 7*ONE_DAY_SECONDS
 
 local function date2TimeZero(dTime, dHour)
 	if dTime <= 0 then
@@ -72,6 +73,18 @@ function FormatTimestamp(dTime, bWithDay)
 	return str
 end
 
+-- 是否为同一周
+function IsSameWeek(dTestTime, dServerTime)
+    local bIsSame = false
+	local dWeekStartTime = GetMondayTime(dServerTime)
+	if dTestTime >= dWeekStartTime 
+		and dTestTime < (dWeekStartTime + ONE_WEEK_SECONDS) then
+		bIsSame = true
+	end
+
+    return bIsSame
+end
+
 --获取当前时间次日6点
 function GetTomorrowStartTime(dTimeNow, dHour)
 
@@ -82,4 +95,19 @@ function GetTomorrowStartTime(dTimeNow, dHour)
     else
         return dZeroTime + ONE_DAY_SECONDS
     end
+end
+
+function GetMondayTime(dCurrentTime)
+    local tbCurTime = os.date("*t", dCurrentTime)
+    local dZeroTime = os.time( {year=tbCurTime.year, month=tbCurTime.month, day=tbCurTime.day, hour = GAME_RESET_TIME, min=0, sec=0} )
+    local dDay2Cal = tbCurTime.wday
+    if tbCurTime.wday == 1 then --星期天，特殊处理
+        dDay2Cal = 8
+    end
+    local dMondayTime = dZeroTime - ONE_DAY_SECONDS * (dDay2Cal - 2) --星期一时间
+    if tbCurTime.wday == 2 and dCurrentTime < dZeroTime then --星期一6点以前，算上周的
+        dMondayTime = dMondayTime - ONE_WEEK_SECONDS
+    end
+
+    return dMondayTime
 end

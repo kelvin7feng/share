@@ -15,7 +15,7 @@ LOG_HEADER = {
 }
 
 -- Debug开关
-DEBUG_SWITCH = true;
+DEBUG_SWITCH = false;
 
 -- Log level, DEBUG > WARN > ERROR > INFO = 0
 LOG_LEVEL = 3;

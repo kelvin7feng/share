@@ -35,6 +35,7 @@ GAME_DATA_TABLE_NAME =
 	SHOP_INFO   	    				= "ShopInfo",
 	PET_INFO   	   		 				= "PetInfo",
 	GUIDE_INFO 	   		 				= "GuideInfo",
+	TASK_INFO 	   		 				= "TaskInfo",
 }
 
 -- 数据字段表
@@ -177,4 +178,10 @@ DATABASE_TABLE_FIELD =
 		dGuideId						= 0,
 	},
 	
+	[GAME_DATA_TABLE_NAME.TASK_INFO]	= 
+	{
+		-- tbTaskList = {dId = dId, dProgress = 0, dState = pkgTaskCfgMgr.TaskState.DOING}
+		tbDaily							= {dLiveness = 0, tbLivenessReward = {}, dLastUpdateTime = 0, tbTaskList = {}},
+		tbWeekly						= {dLiveness = 0, tbLivenessReward = {}, dLastUpdateTime = 0, tbTaskList = {}},
+	},
 }

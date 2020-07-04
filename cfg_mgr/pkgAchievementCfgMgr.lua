@@ -6,6 +6,7 @@ AchievementType = {
     BATTLE_LEVEL                  = 3,
     HOUSE_UPGRADE                 = 4,
     COLLECT_FRUIT                 = 5,
+    QUALITY_EQUIP                 = 6,
 }
 
 UnlockType = {
