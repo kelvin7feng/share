@@ -37,7 +37,7 @@ _cfg.level = {
    levelNo = 5,
    name = '普卡村5',
    boss = 61005,
-   monsterLibId = 1,
+   monsterLibId = 2,
   },
   [6] = {
    id = 6,
@@ -77,7 +77,7 @@ _cfg.level = {
    levelNo = 5,
    name = '陆南小径5',
    boss = 61010,
-   monsterLibId = 2,
+   monsterLibId = 3,
   },
   [11] = {
    id = 11,
@@ -117,7 +117,7 @@ _cfg.level = {
    levelNo = 5,
    name = '农田之地5',
    boss = 61015,
-   monsterLibId = 3,
+   monsterLibId = 4,
   },
   [16] = {
    id = 16,
@@ -157,7 +157,7 @@ _cfg.level = {
    levelNo = 5,
    name = '加罗山5',
    boss = 61020,
-   monsterLibId = 4,
+   monsterLibId = 5,
   },
   [21] = {
    id = 21,
@@ -197,7 +197,7 @@ _cfg.level = {
    levelNo = 5,
    name = '基布林5',
    boss = 61025,
-   monsterLibId = 5,
+   monsterLibId = 6,
   },
   [26] = {
    id = 26,
@@ -237,7 +237,7 @@ _cfg.level = {
    levelNo = 5,
    name = '北郡峭壁5',
    boss = 61030,
-   monsterLibId = 6,
+   monsterLibId = 7,
   },
   [31] = {
    id = 31,
@@ -277,7 +277,7 @@ _cfg.level = {
    levelNo = 5,
    name = '尔维丘陵5',
    boss = 61035,
-   monsterLibId = 7,
+   monsterLibId = 8,
   },
   [36] = {
    id = 36,
@@ -317,7 +317,7 @@ _cfg.level = {
    levelNo = 5,
    name = '塔贝平原5',
    boss = 61040,
-   monsterLibId = 8,
+   monsterLibId = 9,
   },
   [41] = {
    id = 41,
@@ -357,7 +357,7 @@ _cfg.level = {
    levelNo = 5,
    name = '港巴之桥5',
    boss = 61045,
-   monsterLibId = 9,
+   monsterLibId = 10,
   },
   [46] = {
    id = 46,
@@ -397,7 +397,7 @@ _cfg.level = {
    levelNo = 5,
    name = '哥龙堡5',
    boss = 61050,
-   monsterLibId = 10,
+   monsterLibId = 11,
   },
   [51] = {
    id = 51,
@@ -437,7 +437,7 @@ _cfg.level = {
    levelNo = 5,
    name = '守望林地5',
    boss = 61055,
-   monsterLibId = 11,
+   monsterLibId = 12,
   },
   [56] = {
    id = 56,
@@ -477,7 +477,7 @@ _cfg.level = {
    levelNo = 5,
    name = '萨丁石林5',
    boss = 61060,
-   monsterLibId = 12,
+   monsterLibId = 13,
   },
   [61] = {
    id = 61,
@@ -517,7 +517,7 @@ _cfg.level = {
    levelNo = 5,
    name = '玛特之脊5',
    boss = 61065,
-   monsterLibId = 13,
+   monsterLibId = 14,
   },
   [66] = {
    id = 66,
@@ -557,7 +557,7 @@ _cfg.level = {
    levelNo = 5,
    name = '戈卡沙漠5',
    boss = 61070,
-   monsterLibId = 14,
+   monsterLibId = 15,
   },
   [71] = {
    id = 71,
@@ -597,7 +597,7 @@ _cfg.level = {
    levelNo = 5,
    name = '古勒山谷5',
    boss = 61075,
-   monsterLibId = 15,
+   monsterLibId = 16,
   },
   [76] = {
    id = 76,
@@ -637,7 +637,7 @@ _cfg.level = {
    levelNo = 5,
    name = '帕宁山脉5',
    boss = 61080,
-   monsterLibId = 16,
+   monsterLibId = 17,
   },
   [81] = {
    id = 81,
@@ -677,7 +677,7 @@ _cfg.level = {
    levelNo = 5,
    name = '鲁伊城5',
    boss = 61085,
-   monsterLibId = 17,
+   monsterLibId = 18,
   },
   [86] = {
    id = 86,
